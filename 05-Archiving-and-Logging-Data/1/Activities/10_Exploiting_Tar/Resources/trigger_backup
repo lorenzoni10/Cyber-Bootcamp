@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+tar cvf /tmp/backup.tar /home/Documents/jane/*
