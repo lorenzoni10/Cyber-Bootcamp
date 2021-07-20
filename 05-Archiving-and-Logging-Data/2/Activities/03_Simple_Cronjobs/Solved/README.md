@@ -69,7 +69,7 @@ Create the following additional cron jobs.
 
 - Every Friday at 11 p.m., create a compressed tarball of all files in `~/research` in `~/Documents/MedicalArchive`. Name the archive `Medical_backup.tar.gz`.
 
-    `0 23 * * 5 tar cvf ~/Documents/MedicalArchive/Medical_backup.tar.gz ~/research`
+    `0 23 * * 5 tar czvf ~/Documents/MedicalArchive/Medical_backup.tar.gz ~/research`
 
 - Every Friday at 11:05 p.m., verify the validity of the archive `Medical_backup.tar.gz`.
 
