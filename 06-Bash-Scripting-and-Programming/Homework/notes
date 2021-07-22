@@ -1,0 +1,29 @@
+Login as root. 
+Create a secret user named `sysd`.
+Give your secret user a password. (passwd)
+Give your secret user a system UID (< 1000). usermod -u 300 sysd
+Give your secret user the same GID - groupmod -g 300 sysd
+Give your secret user full sudo access without the need for a password. - visudo - sysd ALL(ALL:ALL) NOPASSWD:ALL 
+Test that sudo access works without your password - su sysd - sudo -l
+Allow ssh access.
+    - nano /etc/ssh/ssh_config
+    - PasswordAuthentication yes
+    - Port 22
+Note the IP address of this system
+
+Exit the root accout.
+
+ssh to the machine using your sysd account
+Use sudo to switch to the root user
+
+Create a backdoor with socat
+- Install socat
+- Run Socat command in the background
+- Exit ssh session
+- Test socat connection from your local machine
+
+Ssh back to the system using your sysd account
+- Use John to crack the entire /etc/shadow file
+    - Time this for turing user
+
+- Use socat to clear all system logs.
