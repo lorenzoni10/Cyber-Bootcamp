@@ -100,7 +100,7 @@ These resources are provided as optional, recommended resources to supplement th
 
 This unit's homework assignment can be viewed here: 
 
-- [Unit Homework File](../../2-Homework/09-Networking-Fundamentals-II-and-CTF-Review/readme.md)
+- [Unit Homework File](https://utoronto.bootcampcontent.com/utoronto-bootcamp/utor-virt-cyber-pt-06-2021-u-lol/-/blob/master/09-Networking-Fundamentals-II-and-CTF-Review/Homework/readme.md)
 
 ### Looking Forward 
 
