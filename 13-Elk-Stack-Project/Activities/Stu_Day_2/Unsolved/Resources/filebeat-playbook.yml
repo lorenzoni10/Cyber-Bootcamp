@@ -1,0 +1,30 @@
+---
+- name: installing and launching filebeat
+  hosts: TODO
+  become: yes
+  tasks:
+
+  - name: download filebeat deb
+    command: curl -L -O TODO
+ 
+  - name: install filebeat deb
+    command: dpkg -i TODO
+
+  - name: drop in filebeat.yml 
+    copy:
+      src: /etc/ansible/files/filebeat-config.yml
+      dest: TODO
+
+  - name: enable and configure system module
+    command: TODO
+
+  - name: setup filebeat
+    command: TODO
+
+  - name: start filebeat service
+    command: TODO
+
+  - name: enable service filebeat on boot
+    systemd:
+      name: TODO
+      enabled: yes
