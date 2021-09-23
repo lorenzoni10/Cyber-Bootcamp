@@ -1,0 +1,34 @@
+version: "3.3"
+
+services:
+  ui:
+    image: httpd:2.4
+    ports:
+      - 10000-10003:80
+    volumes:
+      - ./volume:/home
+    networks:
+      demo-net:
+  db:
+    image: mariadb:10.5.1
+    restart: always
+    environment:
+      MYSQL_DATABASE: demodb
+      MYSQL_USER: demouser
+      MYSQL_PASSWORD: demopass
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      demo-net:
+        ipv4_address: 192.168.1.3
+networks:
+  demo-net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.1.0/24"
+
+volumes:
+  ui:
+  db:

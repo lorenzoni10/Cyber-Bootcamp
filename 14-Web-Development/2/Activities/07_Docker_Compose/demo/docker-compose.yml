@@ -1,0 +1,54 @@
+version: "3.3"
+
+services:
+  wordpress:
+    image: wordpress:4.6.1-php5.6-apache
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: examplepass
+      WORDPRESS_DB_NAME: exampledb
+    volumes:
+      - wordpress:/var/www/html
+      - ./volume:/var/www/html/volume
+    container_name: wp
+    networks:
+      app-net:
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_USER: exampleuser
+      MYSQL_PASSWORD: examplepass
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+    container_name: db
+    networks:
+      app-net:
+
+  ui:
+    image: httpd:2.4
+    ports:
+      - 10000-10003:80
+    volumes:
+      - ./volume:/home
+    networks:
+      app-net:
+
+networks:
+  app-net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "10.0.2.0/24"
+
+volumes:
+  wordpress:
+  db:
+  ui:
