@@ -1,0 +1,117 @@
+Log Record 1:
+==================================================================
+
+Src: 192.168.1.9, Dst: 192.124.249.168
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 942
+    Identification: 0x4103 (16643)
+    Flags: 0x4000, Don't fragment
+    Time to live: 128
+    Protocol: TCP (6)
+    Header checksum: 0x3a70 [validation disabled]
+    [Header checksum status: Unverified]
+    Source: 192.168.1.9
+    Destination: 192.124.249.168
+Src Port: 50152, Dst Port: 80, Seq: 3879, Ack: 39771, Len: 902
+    Source Port: 50512
+    Destination Port: 80
+    [Stream index: 82]
+    [TCP Segment Len: 902]
+    Sequence number: 3879    (relative sequence number)
+    [Next sequence number: 4781    (relative sequence number)]
+    Acknowledgment number: 39771    (relative ack number)
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+    Window size value: 256
+    [Calculated window size: 65536]
+
+
+Log Record 2
+======================================
+
+Src: 10.0.0.42, Dst: 35.186.241.40
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 86
+    Identification: 0x0211 (529)
+    Flags: 0x4000, Don't fragment
+    Time to live: 128
+    Protocol: TCP (6)
+    Header checksum: 0xd984 [validation disabled]
+    [Header checksum status: Unverified]
+    Source: 10.0.0.42
+    Destination: 35.186.241.40
+Src Port: 53367, Dst Port: 443, Seq: 1136, Ack: 1307, Len: 46
+    Source Port: 53367
+    Destination Port: 443
+    [Stream index: 113]
+    [TCP Segment Len: 46]
+    Sequence number: 1136    (relative sequence number)
+    [Next sequence number: 1182    (relative sequence number)]
+    Acknowledgment number: 1307    (relative ack number)
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+    Window size value: 251
+    [Calculated window size: 64256]
+    [Window size scaling factor: 256]
+    Checksum: 0xc5d7 [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [SEQ/ACK analysis]
+    [Timestamps]
+    TCP payload (46 bytes)
+
+
+
+Log Record 3
+=================================================
+
+
+Src: 192.168.29.54, Dst: 90.130.70.73
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x10 (DSCP: Unknown, ECN: Not-ECT)
+    Total Length: 59
+    Identification: 0xcccd (52429)
+    Flags: 0x4000, Don't fragment
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xef35 [validation disabled]
+    [Header checksum status: Unverified]
+    Source: 192.168.29.54
+    Destination: 90.130.70.73
+Src Port: 64836, Dst Port: 21, Seq: 17, Ack: 55, Len: 7
+    Source Port: 64836
+    Destination Port: 21
+    [Stream index: 2]
+    [TCP Segment Len: 7]
+    Sequence number: 17    (relative sequence number)
+    [Next sequence number: 24    (relative sequence number)]
+    Acknowledgment number: 55    (relative ack number)
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window size value: 229
+    [Calculated window size: 29312]
+    [Window size scaling factor: 128]
+    Checksum: 0xcb58 [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [SEQ/ACK analysis]
+    [Timestamps]
+    TCP payload (7 bytes)
+

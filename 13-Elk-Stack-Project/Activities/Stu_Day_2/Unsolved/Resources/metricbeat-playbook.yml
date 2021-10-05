@@ -1,0 +1,36 @@
+---
+- name: Install metric beat
+  hosts: webservers
+  become: true
+  tasks:
+    # Use command module
+  - name: Download metricbeat
+    command: curl -L -O #TODO
+
+    # Use command module
+  - name: install metricbeat
+    command: dpkg -i #TODO
+
+    # Use copy module
+  - name: drop in metricbeat config
+    copy:
+      src: /etc/ansible/files/metricbeat-config.yml
+      dest: #TODO
+
+    # Use command module
+  - name: enable and configure docker module for metric beat
+    command: #TODO
+
+    # Use command module
+  - name: setup metric beat
+    command: #TODO
+
+    # Use command module
+  - name: start metric beat
+    command: #TODO
+
+    # Use systemd module
+  - name: enable service metricbeat on boot
+    systemd:
+      name: #TODO
+      enabled: yes

@@ -1,0 +1,70 @@
+version: "3.7"
+
+services:
+  ui1:
+    container_name: wp
+    image: httpd:2.4
+    ports:
+      - 10001:8080
+    volumes:
+      - ./volume:/home
+    networks:
+      demo-net:
+        ipv4_address: 192.168.2.2
+
+  ui2:
+    container_name: wp2
+    image: httpd:2.4
+    ports:
+      - 10002:8080
+    volumes:
+      - ./volume:/home
+    networks:
+      demo-net:
+        ipv4_address: 192.168.2.3
+
+  ui3:
+    container_name: wp3
+    image: httpd:2.4
+    ports:
+      - 10003:8080
+    volumes:
+      - ./volume:/home
+    networks:
+      demo-net:
+        ipv4_address: 192.168.2.4
+
+  ui4:
+    container_name: wp4
+    image: httpd:2.4
+    ports:
+      - 10004:8080
+    volumes:
+      - ./volume:/home
+    networks:
+      demo-net:
+        ipv4_address: 192.168.2.5
+
+  db:
+    container_name: db
+    image: mariadb:10.5.1
+    restart: always
+    environment:
+      MYSQL_DATABASE: demodb
+      MYSQL_USER: demouser
+      MYSQL_PASSWORD: demopass
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      demo-net:
+        ipv4_address: 192.168.2.6
+networks:
+  demo-net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.2.0/24"
+volumes:
+  ui:
+  db:
