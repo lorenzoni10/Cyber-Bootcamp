@@ -1,0 +1,7 @@
+Windows:
+
+.\VBoxManage internalcommands createrawvmdk -filename C:\usb.vmdk -rawdisk \\.\PhysicalDrive<drive_number>
+
+MacOS:
+
+VBoxManage internalcommands createrawvmdk -filename "</path/to/file>.vmdk" -rawdisk /dev/disk#
