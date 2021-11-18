@@ -74,7 +74,7 @@ These resources are provided as optional, recommended resources to supplement th
 
 This unit's homework assignment can be viewed here: 
 
-- [Unit Homework File](../../2-Homework/22-Certification-Prep/README.md)
+- [Unit Homework File](Homework/README.md)
   
 ### Looking Forward 
 
